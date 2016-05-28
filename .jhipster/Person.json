@@ -1,0 +1,18 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "enterpriseId",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sap",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160528160930",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "person",
+    "pagination": "no"
+}

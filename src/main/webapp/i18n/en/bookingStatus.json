@@ -1,0 +1,10 @@
+{
+    "myHutApp": {
+        "BookingStatus" : {
+            "null": "",
+            "CONFIRMED": "CONFIRMED",
+            "PENDING": "PENDING",
+            "CANCELLED": "CANCELLED"
+        }
+    }
+}

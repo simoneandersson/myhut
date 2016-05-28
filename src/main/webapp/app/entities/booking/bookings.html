@@ -1,0 +1,72 @@
+<div>
+    <h2 translate="myHutApp.booking.home.title">Bookings</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="booking.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="myHutApp.booking.home.createLabel">
+                        Create new Booking
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="myHutApp.booking.bookingType">Booking Type</span></th>
+                    <th><span translate="myHutApp.booking.bookingStatus">Booking Status</span></th>
+                    <th><span translate="myHutApp.booking.wbs">Wbs</span></th>
+                    <th><span translate="myHutApp.booking.startDate">Start Date</span></th>
+                    <th><span translate="myHutApp.booking.endDate">End Date</span></th>
+                    <th><span translate="myHutApp.booking.cabinId">Cabin Id</span></th>
+                    <th><span translate="myHutApp.booking.person">Person</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="booking in vm.bookings track by booking.id">
+                    <td><a ui-sref="booking-detail({id:booking.id})">{{booking.id}}</a></td>
+                    <td translate="{{'myHutApp.BookingType.' + booking.bookingType}}">{{booking.bookingType}}</td>
+                    <td translate="{{'myHutApp.BookingStatus.' + booking.bookingStatus}}">{{booking.bookingStatus}}</td>
+                    <td>{{booking.wbs}}</td>
+                        <td>{{booking.startDate | date:'mediumDate'}}</td>
+                        <td>{{booking.endDate | date:'mediumDate'}}</td>
+                    <td>
+                        <a ui-sref="cabin-detail({id:booking.cabinId.id})">{{booking.cabinId.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="person-detail({id:booking.person.id})">{{booking.person.enterpriseId}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="booking-detail({id:booking.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="booking.edit({id:booking.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="booking.delete({id:booking.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

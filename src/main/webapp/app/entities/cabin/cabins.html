@@ -1,0 +1,64 @@
+<div>
+    <h2 translate="myHutApp.cabin.home.title">Cabins</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="cabin.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="myHutApp.cabin.home.createLabel">
+                        Create new Cabin
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="myHutApp.cabin.name">Name</span></th>
+                    <th><span translate="myHutApp.cabin.description">Description</span></th>
+                    <th><span translate="myHutApp.cabin.location">Location</span></th>
+                    <th><span translate="myHutApp.cabin.capacity">Capacity</span></th>
+                    <th><span translate="myHutApp.cabin.photos">Photos</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="cabin in vm.cabins track by cabin.id">
+                    <td><a ui-sref="cabin-detail({id:cabin.id})">{{cabin.id}}</a></td>
+                    <td>{{cabin.name}}</td>
+                    <td>{{cabin.description}}</td>
+                    <td>{{cabin.location}}</td>
+                    <td>{{cabin.capacity}}</td>
+                    <td>{{cabin.photos}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="cabin-detail({id:cabin.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="cabin.edit({id:cabin.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="cabin.delete({id:cabin.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

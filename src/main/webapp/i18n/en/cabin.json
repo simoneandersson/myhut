@@ -1,0 +1,26 @@
+{
+    "myHutApp": {
+        "cabin" : {
+            "home": {
+                "title": "Cabins",
+                "createLabel": "Create a new Cabin",
+                "createOrEditLabel": "Create or edit a Cabin",
+                "search": "Search for Cabin"
+            },
+            "created": "A new Cabin is created with identifier {{ param }}",
+            "updated": "A Cabin is updated with identifier {{ param }}",
+            "deleted": "A Cabin is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Cabin {{ id }}?"
+            },
+            "detail": {
+                "title": "Cabin"
+            },
+            "name": "Name",
+            "description": "Description",
+            "location": "Location",
+            "capacity": "Capacity",
+            "photos": "Photos"
+        }
+    }
+}

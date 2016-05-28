@@ -1,0 +1,9 @@
+{
+    "myHutApp": {
+        "BookingType" : {
+            "null": "",
+            "PROJECT": "PROJECT",
+            "PRIVATE": "PRIVATE"
+        }
+    }
+}

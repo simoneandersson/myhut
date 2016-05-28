@@ -1,0 +1,45 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "cabinId",
+            "otherEntityName": "cabin",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "person",
+            "otherEntityName": "person",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "enterpriseId"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "bookingType",
+            "fieldType": "BookingType",
+            "fieldValues": "PROJECT,PRIVATE"
+        },
+        {
+            "fieldName": "bookingStatus",
+            "fieldType": "BookingStatus",
+            "fieldValues": "CONFIRMED,PENDING,CANCELLED"
+        },
+        {
+            "fieldName": "wbs",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "startDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20160528161946",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "booking",
+    "pagination": "no"
+}

@@ -1,0 +1,42 @@
+
+<div>
+    <h2><span translate="myHutApp.booking.detail.title">Booking</span> {{vm.booking.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="myHutApp.booking.bookingType">Booking Type</span></dt>
+        <dd>
+            <span translate="{{'myHutApp.BookingType.' + vm.booking.bookingType}}">{{vm.booking.bookingType}}</span>
+        </dd>
+        <dt><span translate="myHutApp.booking.bookingStatus">Booking Status</span></dt>
+        <dd>
+            <span translate="{{'myHutApp.BookingStatus.' + vm.booking.bookingStatus}}">{{vm.booking.bookingStatus}}</span>
+        </dd>
+        <dt><span translate="myHutApp.booking.wbs">Wbs</span></dt>
+        <dd>
+            <span>{{vm.booking.wbs}}</span>
+        </dd>
+        <dt><span translate="myHutApp.booking.startDate">Start Date</span></dt>
+        <dd>
+            <span>{{vm.booking.startDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="myHutApp.booking.endDate">End Date</span></dt>
+        <dd>
+            <span>{{vm.booking.endDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="myHutApp.booking.cabinId">Cabin Id</span></dt>
+        <dd>
+            <a ui-sref="cabin-detail({id:vm.booking.cabinId.id})">{{vm.booking.cabinId.id}}</a>
+        </dd>
+        <dt><span translate="myHutApp.booking.person">Person</span></dt>
+        <dd>
+            <a ui-sref="person-detail({id:vm.booking.person.id})">{{vm.booking.person.enterpriseId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

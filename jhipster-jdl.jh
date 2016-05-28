@@ -1,0 +1,41 @@
+entity Cabin {
+	cabinId Long,
+    name String,
+    description String,
+    location String,
+    capacity Integer,
+    photos String
+}
+
+enum BookingType {
+	PROJECT, PRIVATE
+}
+
+enum BookingStatus {
+	CONFIRMED, PENDING, CANCELLED
+}
+
+entity Booking {
+	bookingId Long,
+    bookingType BookingType,
+    bookingStatus BookingStatus,
+    wbs String,
+    startDate ZonedDateTime,
+    endDate ZonedDateTime
+}
+
+entity Person {
+	accentureId String,
+    enterpriseId String
+}
+
+relationship ManyToOne {
+	Booking{cabinId} to Cabin,
+    Booking{accentureId} to Person
+}
+
+
+
+
+
+	

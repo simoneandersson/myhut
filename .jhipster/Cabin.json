@@ -1,0 +1,30 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "location",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "capacity",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "photos",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160528160117",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "cabin",
+    "pagination": "no"
+}
