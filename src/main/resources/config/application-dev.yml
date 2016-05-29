@@ -18,7 +18,7 @@ spring:
         livereload:
             enabled: false # we use gulp + BrowserSync for livereload
     datasource:
-        url: jdbc:mysql://mysql-b3a6f1ff-1.96f5ea1a.cont.dockerapp.io:32774/myhut?useUnicode=true&characterEncoding=utf8&useSSL=false
+        url: jdbc:mysql://mysql-ec5bc59d-1.d8e341b4.cont.dockerapp.io:32775/myhut?useUnicode=true&characterEncoding=utf8&useSSL=false
         #url: jdbc:mysql://10.0.51.80:3306?useUnicode=true&characterEncoding=utf8&useSSL=false
         name:
         username: root
