@@ -329,6 +329,65 @@ ui bootstrap tweaks
     outline: none;
 }
 
+/* Cabin home page styles */
+.cabin {
+    padding-bottom: 20px;
+}
+
+.cabin-overlay-title {
+   position: absolute; 
+   top: 50px; 
+   left: 30px; 
+   width: 50%; 
+   color: white; 
+   font: bold 24px/45px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); 
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px;
+}
+
+.cabin-overlay-capacity {
+    position: absolute;
+    top: 120px;
+    left: 30px;
+    width: 50%;
+    color: white;
+    font: 16px/30px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(0, 0 ,0);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+.cabin-details{
+    border: none;
+}
+
+.info-icon {
+    color: #d9d9d9;
+    font-size: 30px;
+    position: relative;
+    top: -80px;
+    right: 10px;
+}
+
+.cabin-select {
+    position: absolute; 
+    left: 10px;
+    top: 10px;
+    font-size: 2em;
+    background: rgb(255,255,255);
+    background: rgba(255,255,255,0.9);
+    color: #d9d9d9;
+    padding: 5px 5px 5px 5px;
+}
+
+.selected {
+    color: #0d0d0d !important;
+}
+
+
 
 
 /* jhipster-needle-css-add-main JHipster will add new css style */

@@ -5,9 +5,9 @@
         .module('myHutApp')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['$scope', 'Principal', 'LoginService', '$rootScope', '$state', '$timeout', 'Auth'];
+    HomeController.$inject = ['$scope', 'Principal', 'LoginService', '$rootScope', '$state', '$timeout', 'Auth', 'Cabin'];
 
-    function HomeController ($scope, Principal, LoginService, $rootScope, $state, $timeout, Auth) {
+    function HomeController ($scope, Principal, LoginService, $rootScope, $state, $timeout, Auth, Cabin) {
         var vm = this;
         vm.authenticationError = false;
         vm.credentials = {};
@@ -17,6 +17,10 @@
         vm.username = null;
         vm.account = null;
         vm.isAuthenticated = null;
+        vm.cabins = [];
+
+        getCabins();
+
         $scope.$on('authenticationSuccess', function() {
             getAccount();
         });
@@ -55,5 +59,20 @@
                 vm.authenticationError = true;
             });
         }
+        function getCabins()
+        {
+            Cabin.query(function(result) {
+                vm.cabins = result;
+            });
+        }
     }
 })();
+
+function toggleChoose(selectedCabin)
+{
+    $("#" + selectedCabin).toggleClass("selected");
+}
+function toggleInfo(selectedCabin)
+{
+    $(selectedCabin).toggleClass("selected");
+}
