@@ -5,7 +5,11 @@
     <div class="row">
      <div class="col-md-4 col-sm-6" ng-repeat="booking in vm.bookings | filter:{person:{enterpriseId:vm.account.login }} track by booking.id">
     	<div class="panel panel-default">
-           <div class="panel-heading" style="padding-bottom:0px;"><a href="#" class="pull-right">Delete Booking</a> <h4>{{booking.cabinId.name}}   <span class="text-muted" style="font-size:12px;">{{booking.startDate | date:'mediumDate'}} - {{booking.endDate | date:'mediumDate'}}</span></h4>
+           <div class="panel-heading" style="padding-bottom:0px;">
+             <p><a href="#" class="pull-right">Delete Booking</a></p>
+             <h4 style="padding-bottom:0px; border:none;">{{booking.cabinId.name}}
+             </h4>
+                          <span class="text-muted pull-left" style="font-size:10px;">{{booking.startDate | date:'mediumDate'}} - {{booking.endDate | date:'mediumDate'}}</span>
            </div>
    			<div class="panel-body" style="padding-top:0px">
               <div class="clearfix"></div>
