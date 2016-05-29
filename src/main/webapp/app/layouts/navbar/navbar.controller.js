@@ -9,7 +9,7 @@
 
     function NavbarController ($state, Auth, Principal, ProfileService, LoginService) {
         var vm = this;
-
+        vm.test = 'jello';
         vm.isNavbarCollapsed = true;
         vm.isAuthenticated = Principal.isAuthenticated;
 
