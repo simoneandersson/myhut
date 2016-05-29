@@ -1,0 +1,18 @@
+<div>
+    <h2>MyBookings</h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="row">
+     <div class="col-md-4 col-sm-6" ng-repeat="booking in vm.bookings | filter:{person:{enterpriseId:vm.account.login }} track by booking.id">
+    	<div class="panel panel-default">
+           <div class="panel-heading" style="padding-bottom:0px;"><a href="#" class="pull-right">Delete Booking</a> <h4>{{booking.cabinId.name}}   <span class="text-muted" style="font-size:12px;">{{booking.startDate | date:'mediumDate'}} - {{booking.endDate | date:'mediumDate'}}</span></h4>
+           </div>
+   			<div class="panel-body" style="padding-top:0px">
+              <div class="clearfix"></div>
+              <img src="{{booking.cabinId.photos}}" class="img-responsive img-thumbnail pull-left" style="margin-right:5px;">
+                    		<p style="text-align:center;"><span class="label label-info">{{booking.bookingType}}</span> <span class="label label-primary">{{booking.cabinId.capacity}} Persons</span> <span class="label label-warning">{{booking.bookingStatus}}</span></p>
+            </div>
+         </div>
+    </div>
+    </div>
+</div>
